@@ -2,6 +2,7 @@ import React from "react";
 import { Layout } from "../components/Layout";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import setupTags from "../../utils/setupTags";
+import slugify from "slugify";
 
 const Tags = () => {
   const data = useStaticQuery(query);
@@ -12,8 +13,9 @@ const Tags = () => {
         <section className="tags-page">
           {newTags.map((tag, index) => {
             const [text, value] = tag;
+            const slug = slugify(text, { lower: true });
             return (
-              <Link key={index} to={`/${text}`} className="tag">
+              <Link key={index} to={`/tags/${slug}`} className="tag">
                 <h5>{text}</h5>
                 <p>{value} recipe</p>
               </Link>

@@ -73,5 +73,22 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-webfonts`,
+    //   options: {
+    //     fonts: {
+    //       google: [
+    //         {
+    //           family: "Monserrat", // 'font-family' property
+    //           variants: ["400"],
+    //         },
+    //         {
+    //           family: "Inconsolata", // 'font-family' property
+    //           variants: ["400", "500", "600", "700"],
+    //         },
+    //       ],
+    //     },
+    //   },
+    // },
   ],
 };
